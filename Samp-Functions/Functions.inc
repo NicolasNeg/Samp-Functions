@@ -1,13 +1,16 @@
 #include <a_samp>
 #include <YSI\y_hooks>
 
+/* Dialogs */
 #define DG_INVALID -1
 #define DG_STYLE_MSSGBOX 1
 #define DG_STYLE_LIST 2
+
 // soon... #define DG_STYLE_INPUT 3
 
 #define MAX_DGs 100
 
+/* Hair */
 enum
 {
 	HAIR_TYPE_NONE = 0,
@@ -17,9 +20,10 @@ enum
 	HAIR_TYPE_ELVIS
 };
 
-/* News */
+/* Global variables */
 new Using_Dialog[MAX_PLAYERS];
 new bool:DG_OPENED[MAX_PLAYERS] = false;
+
 /* Textdraws For dialogs */
 new PlayerText:Box_Background[MAX_PLAYERS];
 new PlayerText:close[MAX_PLAYERS];
@@ -217,8 +221,8 @@ stock SetPlayerHair(playerid, hair_type, slot)
 	}
 	return 1;
 }
-/* CreateDialog */
 
+/* CreateDialog */
 stock CreateDialog(playerid, DIALOG_ID, DIALOG_CAPTION[], DIALOG_INFO[], DIALOG_BTN1[], DIALOG_BTN2[])
 {
 	if(DG_OPENED[playerid]) return SendClientMessage(playerid, -1, "You are with a DG opened");
@@ -239,6 +243,7 @@ stock CreateDialog(playerid, DIALOG_ID, DIALOG_CAPTION[], DIALOG_INFO[], DIALOG_
 	PlayerTextDrawShow(playerid, down_[playerid]);
 	PlayerTextDrawShow(playerid, button1[playerid]);
 	PlayerTextDrawShow(playerid, button2[playerid]);
+	CallRemoteFunction("OnDGCreated", "i", Using_Dialog[playerid]);
 	return 1;
 }
 
@@ -287,4 +292,6 @@ hook OnPlayerConnect(playerid)
 	return 1;
 }
 
+/* Callbacks */
+forward OnDGCreated(DG_ID);
 forward OnPlayerDGResponse(playerid, response, DG_ID);
