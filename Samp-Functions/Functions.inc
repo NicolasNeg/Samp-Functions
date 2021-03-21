@@ -3,6 +3,7 @@
 
 /* Dialogs */
 #define DG_INVALID -1
+#define DG_STYLE_INVAID -1
 #define DG_STYLE_MSSGBOX 1
 #define DG_STYLE_LIST 2
 
@@ -190,6 +191,13 @@ stock SetPlayerMoney(playerid, money)
 }
 
 /* SetPlayerHair */
+
+stock IsValidSlot(playerid, slot)
+{
+	if(IsPlayerAttachedObjectSlotUsed(playerid, slot)) return false;
+	else return true;
+}
+
 stock SetPlayerHair(playerid, hair_type, slot)
 {
 	switch(hair_type)
@@ -223,9 +231,20 @@ stock SetPlayerHair(playerid, hair_type, slot)
 }
 
 /* CreateDialog */
+stock AddSpace(text[])
+{
+	new string[40];
+	if(strval(text) > 30)
+	{
+		format(string,sizeof(string), "%s\n", text);
+	}
+	return string;
+}
+
 stock CreateDialog(playerid, DIALOG_ID, DIALOG_CAPTION[], DIALOG_INFO[], DIALOG_BTN1[], DIALOG_BTN2[])
 {
 	if(DG_OPENED[playerid]) return SendClientMessage(playerid, -1, "You are with a DG opened");
+	AddSpace(DIALOG_INFO);
 	Using_Dialog[playerid] = DIALOG_ID;
 	DG_OPENED[playerid] = true;
 	SelectTextDraw(playerid, 0xFF0000FF);
@@ -284,6 +303,7 @@ hook OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
     		CallRemoteFunction("OnPlayerDGResponse", "iii", playerid, false, Using_Dialog[playerid]);
     	}
     }
+    else HideDialog(playerid);
 	return 1;
 }
 hook OnPlayerConnect(playerid)
