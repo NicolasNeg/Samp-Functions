@@ -9,7 +9,7 @@ Download [here](https://github.com/NicolasNeg/Samp-Functions/releases) the versi
 
 using `#include <Samp-Functions/Funcion...>`
 
-example `#include <Samp-Functions/DG> // this is de System of dialogs`
+example `#include <Samp-Functions/DG> // this is the System of dialogs`
 
 # Updates
 SetPlayerMoney created...
