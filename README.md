@@ -24,7 +24,10 @@ new callbacks for Dialogs added...
 Functions added: Keys and the DG style inputtext
 
 
-# For Developers only
+# Developers
 
-A system of auto complete
-
+Now more developers are working with me:
+[Sleek](https://github.com/Sleek9)
+[Sengi0p](https://github.com/Sengi0p)
+[Artic](https://github.com/Artickkk)
+more...
