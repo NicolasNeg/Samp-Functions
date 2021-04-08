@@ -21,6 +21,10 @@ CreateDialog created...
 new callbacks for Dialogs added...
 
 # Plugin
-The plugin for samp-functions is now creating...
+Functions added: Keys and the DG style inputtext
 
+
+# For Developers only
+
+A system of auto complete
 
