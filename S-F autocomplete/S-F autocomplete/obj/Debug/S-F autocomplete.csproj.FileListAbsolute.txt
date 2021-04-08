@@ -1,0 +1,10 @@
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\bin\Debug\S-F autocomplete.exe.config
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\bin\Debug\S-F autocomplete.exe
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\bin\Debug\S-F autocomplete.pdb
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\obj\Debug\S-F autocomplete.csprojAssemblyReference.cache
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\obj\Debug\S_F_autocomplete.WinForm_01.resources
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\obj\Debug\S_F_autocomplete.Properties.Resources.resources
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\obj\Debug\S-F autocomplete.csproj.GenerateResource.cache
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\obj\Debug\S-F autocomplete.csproj.CoreCompileInputs.cache
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\obj\Debug\S-F autocomplete.exe
+C:\Users\NegruraNoob1704\source\repos\S-F autocomplete\S-F autocomplete\obj\Debug\S-F autocomplete.pdb
