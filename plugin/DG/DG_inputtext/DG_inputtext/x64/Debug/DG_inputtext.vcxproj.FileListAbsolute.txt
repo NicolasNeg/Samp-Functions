@@ -1,3 +1,0 @@
-C:\Users\NegruraNoob1704\Documents\plugin s-f\DG\DG_inputtext\DG_inputtext\x64\Debug\DG_inputtext.vcxprojAssemblyReference.cache
-C:\Users\NegruraNoob1704\Documents\plugin s-f\DG\DG_inputtext\DG_inputtext\x64\Debug\DG_inputtext.Form1.resources
-C:\Users\NegruraNoob1704\Documents\plugin s-f\DG\DG_inputtext\DG_inputtext\x64\Debug\DG_inputtext.vcxproj.GenerateResource.cache
