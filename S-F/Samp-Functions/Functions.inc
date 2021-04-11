@@ -42,7 +42,7 @@ stock GivePlayerCash(playerid, money)
 		format(string,sizeof(string),"$%i", GetPlayerCash(playerid));
 		PlayerTextDrawSetString(playerid, cash_td[playerid], string);
 		//
-		CallRemoteFunction("PlayerCashUpdate", "ii", playerid, money);
+		CallRemoteFunction("OnPlayerCashUpdate", "ii", playerid, money);
 	}
 	return 1;
 }
@@ -57,7 +57,7 @@ stock SetPlayerCash(playerid, money)
 		format(string,sizeof(string),"$%i", money);
 		PlayerTextDrawSetString(playerid, cash_td[playerid], string);
 	
-		CallRemoteFunction("PlayerCashUpdate", "ii", playerid, money);
+		CallRemoteFunction("OnPlayerCashUpdate", "ii", playerid, money);
 	}
 	return 1;
 }
@@ -123,4 +123,4 @@ hook OnPlayerConnect(playerid)
 }
 
 forward OnVehicleDamage(driver,vehicleid, Float:health);
-forward PlayerCashUpdate(playerid, money);
+forward OnPlayerCashUpdate(playerid, money);
