@@ -7,6 +7,7 @@ Use Pawn.CMD BECAUSE PAWN.CMD CHAD!!111
 
 Creds: Artic.
 
+Made in 4:48 minutes. omg!1
 */
 
 #include <a_samp>
@@ -91,7 +92,21 @@ CMD:accept(playerid)
 	SendClientMessage(sex_friend, -1, "welcome to the sex bro");
 
 	SetSexRoles(playerid, sex_friend);
+	player_sex[playerid][sex_requesting] = INVALID_PLAYER_ID;
 
+	return 1;
+}
+
+CMD:deny(playerid)
+{
+	if (!IsPlayerConnected(player_sex[playerid][sex_requesting]))
+		return SendClientMessage(playerid, -1, "Nobody wants to fuck you...");
+
+	new sex_friend = player_sex[playerid][sex_requesting];
+	SendClientMessage(playerid, -1, "hehe trol...");
+	SendClientMessage(sex_friend, -1, "hehehehehehe sex deny!111 :cry:");	
+
+	player_sex[playerid][sex_requesting] = INVALID_PLAYER_ID;
 	return 1;
 }
 
